@@ -1,0 +1,62 @@
+Git:
+
+trabaja con servidor y local
+/ Pasos de Configuración:
+
+Para configurar el nombre y email en Git:
+ git config - - global user.name “youssef malki”
+git config - - global user.email “malki.youssef10@gmail.com”
+ (este comando para saber la configuracion de tu nombre y el tu  email usado en git)
+Configurar la clave SSH hay que seguir los siguientes pasos:
+ ssh-keygen
+ssh-add  ~/.ssh/id_rsa
+cat  ~/.ssh/id_rsa.pub.
+Ir al remote GitLab:
+ preferencias
+SSH Keys
+Pegar la clave
+/Paso Para Conectar el repositorio Local con el remote
+   Un paso importante es subir tu repositorio local al repositorio remote (GitLab)  usamos el comando:
+ Git remote add origin
+ URL:  https://gitlab.com/malki1269/testgit.git 
+SSH: git clone git@gitlab.com:Youssef1269/proyecto_git_youssef.git
+/Pasos crear carpeta 
+ Crear una carpeta (mkdir nombre de la carpeta)
+Abrir la carpeta (cd nombre de la carpeta)
+Crear un fichero (touch nombre del fichero.extension)
+Abrir y escribir en el fichero ( nano nombre del fichero.extension, escribir tu programa o lo que sea)
+Ctrl+X
+escribir Y o Yes
+Enter
+
+Para la initialisation del repositorio local usamos el comando:
+ Git init
+Para saber el estatut de nuestro repositorio usamos el comando :
+ Git status  (Es recomendable para saber el estado de tu repositorio)
+ Para añadir la carpeta en el repositorio    usamos el comando :
+ Git add . (para añadir todos los trabajos hechos)
+Git add (nombre del fichero) en este caso añadimos solo un fichero.
+  Para registrar y dar un mensaje de tu repositorio usamos el comando :
+  Git commit - m “Mensaje”    
+  Ahora para  subir tu trabajo (fichero, carpeta……)  del repositorio local a repositorio remote usamos el comando:
+ Git push -u origin master 
+ Para borrar una carpeta git       rm .git/ nombre de carpeta -r
+Git branch —> para saber en qué rama estas
+git branch -v
+git branch -a 
+git branch -v -a 
+ls -altr —> aqui vemos todos los archivos incluso .Git
+ls -l —-> aqui vemos solo los archivos creados y no  vemos el archivo git
+find . —-> para ver todos los archivos .git
+
+git branch  (nombre rama)---> para crear rama
+git branch -d (nombre rama)---> para eliminar rama
+git checkout (nombre rama)---> para cambiar la rama o git switch (lo mismo)
+git checkout -b (nombre de la rama)---> para crear rama y cambiar la rama ala vez
+para fusionar las ramas:
+  checkout master
+merge nombre de la rama
+  git tag -a v.1.0 -m "version 1.0" —> para crear etiquetas y escribir un mensaje  
+  git push –tags —> para subir el tag al remoto (GitLab)
+    
+
